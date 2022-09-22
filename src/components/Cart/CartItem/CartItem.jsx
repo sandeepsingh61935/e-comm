@@ -21,7 +21,7 @@ const CartItem = ({ item, onUpdateQuantity, onRemoveQuantity }) => {
         className={classes.media}
       ></CardMedia>
       <CardContent className={classes.cardContent}>
-        <Typography variant="h4" noWrap= {true}>
+        <Typography variant="h4" noWrap = {true}>
           {item.name}
         </Typography>
         <Typography variant="h5">
@@ -31,11 +31,11 @@ const CartItem = ({ item, onUpdateQuantity, onRemoveQuantity }) => {
 
       <CardActions className={classes.CardActions}>
         <div className={classes.buttons}>
-          <Button className={classes.minus} type="button" size="small" onClick = {()=>onUpdateQuantity(item.id,item.quantity-1)}>
+          <Button  type="button" size="small" onClick = {()=>onUpdateQuantity(item.id,item.quantity-1)}>
             -
           </Button>
-          <Typography className> {item.quantity} </Typography>
-          <Button className={classes.plus} type="button" size="small" onClick = {()=>onUpdateQuantity(item.id,item.quantity+1)}>
+          <Typography > {item.quantity} </Typography>
+          <Button  type="button" size="small" onClick = {()=>onUpdateQuantity(item.id,item.quantity+1)}>
             +
           </Button>
         </div>
