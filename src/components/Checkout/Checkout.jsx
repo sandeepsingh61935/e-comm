@@ -57,7 +57,7 @@ const Checkout = ({cart}) => {
               </Step>
             ))}
           </Stepper>
-          {activeStep === steps.length ? <Confirmation /> : checkoutToken && (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next = {next}/> : <PaymentForm shippingData = {shippingData} />) }
+          {activeStep === steps.length ? <Confirmation /> : checkoutToken && (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next = {next}/> : <PaymentForm shippingData = {shippingData} checkoutToken= {checkoutToken}/>) }
         </Paper>
       </main>
     </>
